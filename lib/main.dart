@@ -83,15 +83,6 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: IntrinsicHeight(
                   child: Column(
                     children: <Widget>[
-                      /*
-                      Container(
-                        // A fixed-height child.
-                        color: const Color(0xffa97432), // Yellow
-                        height: 120.0,
-                        alignment: Alignment.center,
-                        child: const Text('Bovespa Hoje',
-
-                      ),*/
                       Padding(
                           padding: EdgeInsets.all(25.0),
                           child: Image.asset('assets/bovespa.jpg', width: 300)
@@ -106,26 +97,56 @@ class _MyHomePageState extends State<MyHomePage> {
                                 fontWeight: FontWeight.bold, fontSize: 25)),
                       ),
                       Padding(
-                          padding: EdgeInsets.all(25.0),
-                          child: Image.asset('assets/grafico.png', width: 350)
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          child: Image.asset('assets/construir.jpeg', width: 340)
                       ),
                       Container(
                         // A fixed-height child.
                         alignment: Alignment.topCenter,
                         child: const Text(
-                            'É avaliada a flutuação de valor de um conjunto de ações com alta negociação na bolsa brasileira',
+                            'Para medir este índice, são observados o valor de 92 ações de alta negociação na bolsa',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 20)),
+                                fontWeight: FontWeight.bold, fontSize: 25)),
                       ),
-                      Expanded(
-                        // A flexible child that will grow to fit the viewport but
-                        // still be at least as big as necessary to fit its contents.
-                        child: Container( // Red
-                          height: 1000.0,
-                          alignment: Alignment.center,
-                          child: const Text('Flexible Content'),
-                        ),
+                      Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          child: Image.asset('assets/dinheiro.jpg', width: 340)
+                      ),
+                      Container(
+                        // A fixed-height child.
+                        alignment: Alignment.topCenter,
+                        child: const Text(
+                            'Esse conjunto de ações corresponde a cerca de 80% de todo o volume negociado na bolsa de valores brasileira',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25)),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          child: Image.asset('assets/multiplica.jpeg', width: 340)
+                      ),
+                      Container(
+                        // A fixed-height child.
+                        alignment: Alignment.topCenter,
+                        child: const Text(
+                            'Nesse conjunto de ações, algumas tem influência maior, outras tem influência menor no termômetro então cada uma é multiplicada por um "peso" e todas tem seu valor somado',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25)),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.symmetric(vertical: 15.0),
+                          child: Image.asset('assets/grafico.png', width: 400)
+                      ),
+                      Container(
+                        // A fixed-height child.
+                        alignment: Alignment.topCenter,
+                        child: const Text(
+                            'Isso permite gerar um número e acompanhar em tempo real, a valorização ou desvalorização dessas ações de alta importância no mercado',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25)),
                       ),
                     ],
                   ),
