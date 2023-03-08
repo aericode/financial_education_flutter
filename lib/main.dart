@@ -1,7 +1,18 @@
 import 'package:flutter/material.dart';
+import 'package:http/http.dart' as http;
+import 'dart:async';
+import 'dart:convert';
 
-void main() {
+
+void main() async {
   runApp(const MyApp());
+}
+
+const request = "https://api.hgbrasil.com/finance?format=json-cors&key=72697c9d";
+
+Future<Map> getData() async {
+  http.Response response = await http.get(Uri.parse(request));
+  return json.decode(response.body);
 }
 
 class MyApp extends StatelessWidget {
