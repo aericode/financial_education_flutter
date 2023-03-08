@@ -68,90 +68,116 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
           title: const Text("iBovespa hoje",
               style: TextStyle(
-              fontWeight: FontWeight.bold, fontSize: 25, color: Colors.white)),
+                  fontWeight: FontWeight.bold,
+                  fontSize: 25,
+                  color: Colors.white)),
           centerTitle: true,
           backgroundColor: Colors.green.shade900),
       body: DefaultTextStyle(
-        style: Theme.of(context).textTheme.bodyMedium!,
+        style: Theme
+            .of(context)
+            .textTheme
+            .bodyMedium!,
         child: LayoutBuilder(
           builder: (BuildContext context, BoxConstraints viewportConstraints) {
             return SingleChildScrollView(
-              child: ConstrainedBox(
-                constraints: BoxConstraints(
-                  minHeight: viewportConstraints.maxHeight,
-                ),
-                child: IntrinsicHeight(
-                  child: Column(
-                    children: <Widget>[
-                      Padding(
-                          padding: EdgeInsets.all(25.0),
-                          child: Image.asset('assets/bovespa.jpg', width: 300)
-                      ),
-                      Container(
-                        // A fixed-height child.
-                        alignment: Alignment.topCenter,
-                        child: const Text(
-                            'Conhecido como IBOV, o índice funciona como um termômetro do mercado acionário do Brasil',
+                child: ConstrainedBox(
+                    constraints: BoxConstraints(
+                      minHeight: viewportConstraints.maxHeight,
+                    ),
+                    child: IntrinsicHeight(
+                        child: Column(
+                            children: <Widget>[
+                        Padding(
+                        padding: EdgeInsets.all(25.0),
+                        child: Image.asset('assets/bovespa.jpg', width: 300)),
+                    Container(
+                      // A fixed-height child.
+                      alignment: Alignment.topCenter,
+                      child: const Text(
+                          'Conhecido como IBOV, o índice funciona como um termômetro do mercado acionário do Brasil',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25)),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 15.0),
+                        child:
+                        Image.asset('assets/construir.jpeg', width: 340)),
+                    Container(
+                      // A fixed-height child.
+                      alignment: Alignment.topCenter,
+                      child: const Text(
+                          'Para medir este índice, são observados o valor de 92 ações de alta negociação na bolsa',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25)),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 15.0),
+                        child:
+                        Image.asset('assets/dinheiro.jpg', width: 340)),
+                    Container(
+                      // A fixed-height child.
+                      alignment: Alignment.topCenter,
+                      child: const Text(
+                          'Esse conjunto de ações corresponde a cerca de 80% de todo o volume negociado na bolsa de valores brasileira',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25)),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 15.0),
+                        child: Image.asset('assets/multiplica.jpeg',
+                            width: 340)),
+                    Container(
+                      // A fixed-height child.
+                      alignment: Alignment.topCenter,
+                      child: const Text(
+                          'Algumas ações tem influência maior do que outras nesse termômetro então cada uma é multiplicada por um "peso" e todas tem seu valor somado',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25)),
+                    ),
+                    Padding(
+                        padding: EdgeInsets.symmetric(vertical: 15.0),
+                        child: Image.asset('assets/grafico.png', width: 400)),
+                    Container(
+                      // A fixed-height child.
+                      alignment: Alignment.topCenter,
+                      child: const Text(
+                          'Isso permite gerar um número e acompanhar em tempo real, a valorização ou desvalorização desse conjunto de ações, que diz bastante a respeito do nossso mercado',
+                          textAlign: TextAlign.center,
+                          style: TextStyle(
+                              fontWeight: FontWeight.bold, fontSize: 25)),
+                    ),
+                    Column(children: <Widget>[
+                    Container(
+                    // A fixed-height child.
+                      padding: EdgeInsets.fromLTRB(0,100,0,10),
+                    alignment: Alignment.center,
+                        child: Text('No momento o índice IBOVESPA está com',
                             textAlign: TextAlign.center,
                             style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25)),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.symmetric(vertical: 15.0),
-                          child: Image.asset('assets/construir.jpeg', width: 340)
-                      ),
-                      Container(
-                        // A fixed-height child.
-                        alignment: Alignment.topCenter,
-                        child: const Text(
-                            'Para medir este índice, são observados o valor de 92 ações de alta negociação na bolsa',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25)),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.symmetric(vertical: 15.0),
-                          child: Image.asset('assets/dinheiro.jpg', width: 340)
-                      ),
-                      Container(
-                        // A fixed-height child.
-                        alignment: Alignment.topCenter,
-                        child: const Text(
-                            'Esse conjunto de ações corresponde a cerca de 80% de todo o volume negociado na bolsa de valores brasileira',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25)),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.symmetric(vertical: 15.0),
-                          child: Image.asset('assets/multiplica.jpeg', width: 340)
-                      ),
-                      Container(
-                        // A fixed-height child.
-                        alignment: Alignment.topCenter,
-                        child: const Text(
-                            'Nesse conjunto de ações, algumas tem influência maior, outras tem influência menor no termômetro então cada uma é multiplicada por um "peso" e todas tem seu valor somado',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25)),
-                      ),
-                      Padding(
-                          padding: EdgeInsets.symmetric(vertical: 15.0),
-                          child: Image.asset('assets/grafico.png', width: 400)
-                      ),
-                      Container(
-                        // A fixed-height child.
-                        alignment: Alignment.topCenter,
-                        child: const Text(
-                            'Isso permite gerar um número e acompanhar em tempo real, a valorização ou desvalorização dessas ações de alta importância no mercado',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                                fontWeight: FontWeight.bold, fontSize: 25)),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
+                                fontWeight: FontWeight.bold,
+                                fontSize: 30))),
+                    Text('106.039,00',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            fontSize: 50,
+                            color: Colors.blue)),
+                Text('pontos',
+                    textAlign: TextAlign.center,
+                    style: TextStyle(
+                        fontWeight: FontWeight.bold,
+                        fontSize: 30))
+
+                ]),
+            ],
+            ),
+            ),
+            ),
             );
           },
         ),
