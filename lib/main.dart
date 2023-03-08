@@ -93,7 +93,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         // A fixed-height child.
                         alignment: Alignment.topCenter,
                         child: const Text(
-                            'Conhecido como IBOV, o índice funciona como um termômetro do mercado acionário do Brasil',
+                            'O Índice da Bolsa de Valores de São Paulo, também conhecido como IBOVESPA funciona como um termômetro do mercado acionário do Brasil',
                             textAlign: TextAlign.center,
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 25)),
@@ -201,6 +201,42 @@ class _MyHomePageState extends State<MyHomePage> {
                             style: TextStyle(
                                 fontWeight: FontWeight.bold, fontSize: 30))
                       ]),
+                      Padding(
+                          padding: EdgeInsets.fromLTRB(0, 180, 0, 10),
+                          child: Image.asset('assets/estacoes.jpg', width: 400)),
+                      Container(
+                        // A fixed-height child.
+                        alignment: Alignment.topCenter,
+                        child: const Text(
+                            'Vale ressaltar que vários elementos associados a esse índice estão sujeitos à mudança. ',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25)),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.symmetric(vertical: 25.0),
+                          child: Image.asset('assets/marcasbrasileiras.jpg', width: 400)),
+                      Container(
+                        // A fixed-height child.
+                        alignment: Alignment.topCenter,
+                        child: const Text(
+                            'As empresas que compõem o índice variam, são revistas aproximadamente a cada três meses, e o número de empresas também não é fixo',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25)),
+                      ),
+                      Padding(
+                          padding: EdgeInsets.symmetric(vertical: 25.0),
+                          child: Image.asset('assets/americanas.png', width: 400)),
+                      Container(
+                        // A fixed-height child.
+                        alignment: Alignment.bottomCenter,
+                        child: const Text(
+                            'Além disso, a própria natureza dinâmica do mercado faz com que empresas ganhem e percam relevância dentro do próprio índice',
+                            textAlign: TextAlign.center,
+                            style: TextStyle(
+                                fontWeight: FontWeight.bold, fontSize: 25)),
+                      ),
                     ],
                   ),
                 ),
