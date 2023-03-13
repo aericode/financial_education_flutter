@@ -8,7 +8,7 @@ void main() async {
 }
 
 const request =
-    "https://api.hgbrasil.com/finance?format=json-cors&key=72697c9d";
+    "https://api.hgbrasil.com/finance?format=json-cors&key=7--no-sound-null-safety2697c9d";
 
 Future<Map> getData() async {
   http.Response response = await http.get(Uri.parse(request));
